@@ -1,21 +1,52 @@
 .home {
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    .UseForBorder();
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+       div, nav {
+        text-align: center;
+       }
+    }
+  }
+
+  .content-top {
+    margin: 30px 0;
+    .UseForBorder();
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
     }
+
+  }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -25,8 +56,12 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .UseForBorder();
+    display: flex;
 
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -53,9 +88,23 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+        flex-direction: column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        text-align: center
+    }
+
+
+      .btn {
+        .btnColor;
+      }
     }
   }
 }// home
